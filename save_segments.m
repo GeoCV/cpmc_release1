@@ -11,6 +11,7 @@ for i=1:size(segments,3)
     alpha_chann = segments(:, :, i)*0.5;
     Img = immerge(I, bground, alpha_chann);
     imshow(Img);
+    fig=gcf;
     print(sprintf('%s%s',save_dir,title), '-djpeg');
     %print(sprintf('%stest%.4d',figdir,i),'-djpeg');
 end
